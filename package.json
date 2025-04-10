@@ -1,0 +1,14 @@
+{
+  "name": "job-search-automation",
+  "version": "1.0.0",
+  "description": "Automated job search and application system",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "start": "cd backend && node server.js",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install"
+  },
+  "author": "",
+  "license": "MIT"
+}

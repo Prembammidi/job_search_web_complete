@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: job-search-automation
+    env: node
+    buildCommand: cd frontend && npm install && npm run build && cd ../backend && npm install
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CREDENTIAL_ENCRYPTION_KEY
+        generateValue: true
